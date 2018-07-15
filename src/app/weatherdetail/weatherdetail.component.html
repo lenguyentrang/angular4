@@ -1,0 +1,31 @@
+<h3>{{title}}</h3>
+<div  *ngFor = "let weatherData of results">
+  <a href="/weather/{{cityCode}}">
+    <img src="https://www.metaweather.com/static/img/weather/{{weatherData.weather_state_abbr}}.svg">
+    <br>
+    <label>Date:</label> {{(weatherData.applicable_date | date:'EEEE') }} {{weatherData.applicable_date | date:'yyyy-MM-dd'}}
+    <br>
+    <label>* the temperature: </label>{{weatherData.the_temp}}
+    <br>
+    <label>* the maximum temperature: </label>{{weatherData.min_temp}}
+    <br>
+    <label>* the minimum temperature: </label>{{weatherData.max_temp}}
+<br>
+    <label>* the air_pressure: </label>{{weatherData.air_pressure}}
+<br>
+    <label>* the humidity: </label>{{weatherData.humidity}}
+<br>
+    <label>* the predictability: </label>{{weatherData.predictability}}
+<br>
+    <label>* the visibility: </label>{{weatherData.visibility}}
+<br>
+    <label>* the weather_state_name: </label>{{weatherData.weather_state_name}}
+<br>
+    <label>* the wind_direction: </label>{{weatherData.wind_direction}}
+<br>
+    <label>* the wind_direction_compass: </label>{{weatherData.wind_direction_compass}}
+<br>
+    <label>* the wind_speed: </label>{{weatherData.wind_speed}}
+
+  </a>
+</div>

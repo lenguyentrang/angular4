@@ -9,6 +9,7 @@ import { AppRouter } from './app.routing';
 import {HttpClientModule} from "@angular/common/http";
 import { WeatherComponent } from './weather/weather.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { WeatherdetailComponent } from './weatherdetail/weatherdetail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppAboutComponent,
     AppContactComponent,
     AppHomeComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherdetailComponent
   ],
   imports: [
     BrowserModule,

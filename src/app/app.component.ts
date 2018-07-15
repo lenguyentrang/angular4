@@ -16,8 +16,6 @@ import {Router} from "@angular/router";
 
     <ul>
       <li><h2><a routerLink="/home">Home</a></h2></li>
-      <li><h2><a routerLink="/about">About</a></h2></li>
-      <li><h2><a routerLink="/contact">Contact</a></h2></li>
     </ul>
 
     <router-outlet></router-outlet>

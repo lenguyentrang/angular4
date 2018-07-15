@@ -5,7 +5,7 @@ import {ActivatedRoute} from "@angular/router";
 @Component({
   selector: 'app-about',
   template: `
-      <weather *ngIf="id>0" [cityCode]=id></weather>
+      <weatherdetail *ngIf="id>0" [cityCode]=id></weatherdetail>
   `,
   styles: [``]
 })
