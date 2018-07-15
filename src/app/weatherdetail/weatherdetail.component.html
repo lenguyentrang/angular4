@@ -1,9 +1,9 @@
 <h3>{{title}}</h3>
 <div  *ngFor = "let weatherData of results">
   <a href="/weather/{{cityCode}}">
-    <img src="https://www.metaweather.com/static/img/weather/{{weatherData.weather_state_abbr}}.svg">
+    <img style="width: 100px; height: 100px;" src="https://www.metaweather.com/static/img/weather/{{weatherData.weather_state_abbr}}.svg">
     <br>
-    <label>Date:</label> {{(weatherData.applicable_date | date:'EEEE') }} {{weatherData.applicable_date | date:'yyyy-MM-dd'}}
+    <label>Date:</label> {{(weatherData.applicable_date | date:'EEEE') }}, {{weatherData.applicable_date | date:'yyyy-MM-dd'}}
     <br>
     <label>* the temperature: </label>{{weatherData.the_temp}}
     <br>
