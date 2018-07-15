@@ -7,13 +7,15 @@ import { AppAboutComponent } from './app-about.component';
 import { AppContactComponent } from './app-contact.component';
 import { AppRouter } from './app.routing';
 import {HttpClientModule} from "@angular/common/http";
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppAboutComponent,
     AppContactComponent,
-    AppHomeComponent
+    AppHomeComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
