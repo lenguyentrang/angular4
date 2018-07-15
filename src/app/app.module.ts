@@ -8,6 +8,7 @@ import { AppContactComponent } from './app-contact.component';
 import { AppRouter } from './app.routing';
 import {HttpClientModule} from "@angular/common/http";
 import { WeatherComponent } from './weather/weather.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { WeatherComponent } from './weather/weather.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRouter
   ],
   providers: [],

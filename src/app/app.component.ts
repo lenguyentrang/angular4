@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
   template: `
     <div class="header"><h2>Welcome to {{title}}</h2></div>
+    <div>
+        <form #search = "ngForm" (ngSubmit) = "onClickSubmit(search.value)" >
+            <input type = "text" name = "keyword" placeholder = "keyword Seach" ngModel>
+            <br/>
+            <input type = "submit" value = "Search">
+        </form>
+    </div>
 
     <ul>
       <li><h2><a routerLink="/home">Home</a></h2></li>
@@ -23,4 +32,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular 4 Routing App';
+
+    keyword;
+    formdata;
+    constructor(private router: Router) {}
+    ngOnInit() {
+        this.formdata = new FormGroup({
+            keyword: new FormControl("angular@gmail.com"),
+        });
+    }
+
+    onClickSubmit(data) {
+        alert("Entered Email id : " + data.keyword);
+        this.router.navigate(['/search/'+data.keyword])
+    }
 }

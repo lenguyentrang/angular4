@@ -8,8 +8,8 @@ import { AppContactComponent } from './app-contact.component';
 const routes : Routes = [
     { path:'', redirectTo:'/home', pathMatch:'full'},
     { path:'home', component:AppHomeComponent},
-    { path:'about/:id', component:AppAboutComponent },
-    { path:'contact/:keyword', component:AppContactComponent }
+    { path:'weather/:id', component:AppAboutComponent },
+    { path:'search/:keyword', component:AppContactComponent }
 ]
 
 @NgModule({
